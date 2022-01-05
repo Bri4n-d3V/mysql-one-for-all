@@ -260,7 +260,7 @@ INSERT INTO `historico_de_reproducoes` (`usuario_id`, `cancoes_id`, `data_reprod
 INSERT INTO `historico_de_reproducoes` (`usuario_id`, `cancoes_id`, `data_reproducao`) VALUES (1, 23, '2020-03-06 11:22:33');
 INSERT INTO `historico_de_reproducoes` (`usuario_id`, `cancoes_id`, `data_reproducao`) VALUES (1, 14, '2020-08-05 08:05:17');
 INSERT INTO `historico_de_reproducoes` (`usuario_id`, `cancoes_id`, `data_reproducao`) VALUES (1, 15, '2020-09-14 16:32:22');
-INSERT INTO `historico_de_reproducoes` (`usuario_id`, `cancoes_id`, `data_reproducao`) VALUES (2, 29, '2020-01-02 07:40:33');
+INSERT INTO `historico_de_reproducoes` (`usuario_id`, `cancoes_id`, `data_reproducao`) VALUES (2, 34, '2020-01-02 07:40:33');
 INSERT INTO `historico_de_reproducoes` (`usuario_id`, `cancoes_id`, `data_reproducao`) VALUES (2, 24, '2020-05-16 06:16:22');
 INSERT INTO `historico_de_reproducoes` (`usuario_id`, `cancoes_id`, `data_reproducao`) VALUES (2, 21, '2020-10-09 12:27:48');
 INSERT INTO `historico_de_reproducoes` (`usuario_id`, `cancoes_id`, `data_reproducao`) VALUES (2, 39, '2020-09-21 13:14:46');
