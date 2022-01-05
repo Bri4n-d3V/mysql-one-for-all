@@ -21,7 +21,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 CREATE TABLE IF NOT EXISTS `plano` (
   `plano_id` INT NOT NULL,
   `plano` VARCHAR(45) NOT NULL,
-  ` valor_plano` DECIMAL NOT NULL,
+  `valor_plano` DECIMAL(10,2) NOT NULL,
   PRIMARY KEY (`plano_id`),
   UNIQUE INDEX `plano_id_UNIQUE` (`plano_id` ASC) VISIBLE)
 ENGINE = InnoDB;
@@ -145,10 +145,10 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- Data for table `plano`
 -- -----------------------------------------------------
 START TRANSACTION;
-INSERT INTO `plano` (`plano_id`, `plano`, ` valor_plano`) VALUES (1, 'gratuito', 0);
-INSERT INTO `plano` (`plano_id`, `plano`, ` valor_plano`) VALUES (2, 'universitário', 5.99);
-INSERT INTO `plano` (`plano_id`, `plano`, ` valor_plano`) VALUES (3, 'pessoal', 6.99);
-INSERT INTO `plano` (`plano_id`, `plano`, ` valor_plano`) VALUES (4, 'familiar', 7.99);
+INSERT INTO `plano` (`plano_id`, `plano`, `valor_plano`) VALUES (1, 'gratuito', 0);
+INSERT INTO `plano` (`plano_id`, `plano`, `valor_plano`) VALUES (2, 'universitário', 5.99);
+INSERT INTO `plano` (`plano_id`, `plano`, `valor_plano`) VALUES (3, 'pessoal', 6.99);
+INSERT INTO `plano` (`plano_id`, `plano`, `valor_plano`) VALUES (4, 'familiar', 7.99);
 
 COMMIT;
 
