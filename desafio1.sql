@@ -13,9 +13,8 @@ CREATE TABLE IF NOT EXISTS `plano` (
   `plano_id` INT NOT NULL,
   `plano` VARCHAR(45) NOT NULL,
   `valor_plano` DECIMAL(10,2) NOT NULL,
-  PRIMARY KEY (`plano_id`),
-  UNIQUE INDEX `plano_id_UNIQUE` (`plano_id` ASC) VISIBLE)
-ENGINE = InnoDB;
+  PRIMARY KEY (`plano_id`));
+   -- UNIQUE INDEX `plano_id_UNIQUE` (`plano_id` ASC) VISIBLE);
 
 
 -- -----------------------------------------------------
@@ -29,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `plano_id` INT NOT NULL,
   PRIMARY KEY (`usuario_id`),
   INDEX `plano_id_idx` (`plano_id` ASC) VISIBLE,
-  UNIQUE INDEX `usuario_id_UNIQUE` (`usuario_id` ASC) VISIBLE,
+  -- UNIQUE INDEX `usuario_id_UNIQUE` (`usuario_id` ASC) VISIBLE,
   CONSTRAINT `fk_plano_id`
     FOREIGN KEY (`plano_id`)
     REFERENCES `plano` (`plano_id`)
@@ -57,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `album` (
   `artista_id` INT NOT NULL,
   `ano_lancamento` INT NOT NULL,
   PRIMARY KEY (`album_id`),
-  INDEX `fk_artista_id_idx` (`artista_id` ASC) VISIBLE,
+  -- INDEX `fk_artista_id_idx` (`artista_id` ASC) VISIBLE,
   CONSTRAINT `fk_artista_id`
     FOREIGN KEY (`artista_id`)
     REFERENCES `artista` (`artista_id`)
@@ -75,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `cancoes` (
   `album_id` INT NOT NULL,
   `duracao_segundos` INT NOT NULL,
   PRIMARY KEY (`cancoes_id`),
-  INDEX `fk_album_id_idx` (`album_id` ASC) VISIBLE,
+  -- INDEX `fk_album_id_idx` (`album_id` ASC) VISIBLE,
   CONSTRAINT `fk_album_id`
     FOREIGN KEY (`album_id`)
     REFERENCES `album` (`album_id`)
@@ -91,8 +90,8 @@ CREATE TABLE IF NOT EXISTS `historico_de_reproducoes` (
   `usuario_id` INT NOT NULL,
   `cancoes_id` INT NOT NULL,
   `data_reproducao` DATETIME NOT NULL,
-  INDEX `fk_usuario_id_idx` (`usuario_id` ASC) VISIBLE,
-  INDEX `fk_cancoes_id_idx` (`cancoes_id` ASC) VISIBLE,
+  -- INDEX `fk_usuario_id_idx` (`usuario_id` ASC) VISIBLE,
+  -- INDEX `fk_cancoes_id_idx` (`cancoes_id` ASC) VISIBLE,
   PRIMARY KEY (`usuario_id`, `cancoes_id`, `data_reproducao`),
   CONSTRAINT `fk_usuario_id`
     FOREIGN KEY (`usuario_id`)
@@ -113,7 +112,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `seguindo_artistas` (
   `usuario_id` INT NOT NULL,
   `artista_id` INT NOT NULL,
-  INDEX `fk_artista_id_idx` (`artista_id` ASC) VISIBLE,
+  -- INDEX `fk_artista_id_idx` (`artista_id` ASC) VISIBLE,
   PRIMARY KEY (`usuario_id`, `artista_id`),
   CONSTRAINT `usuario_id_fk`
     FOREIGN KEY (`usuario_id`)
