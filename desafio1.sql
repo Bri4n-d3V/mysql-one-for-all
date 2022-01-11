@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `data_assinatura` DATE NOT NULL,
   `plano_id` INT NOT NULL,
   PRIMARY KEY (`usuario_id`),
-  INDEX `plano_id_idx` (`plano_id` ASC) VISIBLE,
+  INDEX `plano_id_idx` (`plano_id` ASC),
   CONSTRAINT `fk_plano_id`
     FOREIGN KEY (`plano_id`)
     REFERENCES `plano` (`plano_id`)
